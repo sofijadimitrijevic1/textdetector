@@ -62,6 +62,7 @@ def train_model(model, train_loader, val_loader, optimizer, epochs=3):
             optimizer.step()
 
             total_train_loss += loss.item()
+        
 
         avg_train_loss = total_train_loss / len(train_loader)
 

@@ -1,19 +1,20 @@
 Dataset setup
 
-Download the AEON essays dataset from Kaggle:
+1. Download the AEON essays dataset from Kaggle:
 https://www.kaggle.com/datasets/mannacharya/aeon-essays-dataset
 
-Create the following folders:
+2. Create the following folders:
 
 textdetector/data/raw
+
 textdetector/data/processed
 
-Place the downloaded dataset in:
+3. Place the downloaded dataset in:
 textdetector/data/raw/essays.csv
 
-Process the human essays:
+4. Process the human essays:
 python data/human_essays.py
 
 
-Generate AI essays:
+5. Generate AI essays:
 python data/generate_ai_essays.py

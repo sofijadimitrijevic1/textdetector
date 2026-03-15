@@ -9,3 +9,7 @@ groq
 tqdm
 python-dotenv
 jupyter
+arxiv
+pdfplumber
+requests
+google-genai

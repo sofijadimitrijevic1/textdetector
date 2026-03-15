@@ -142,13 +142,3 @@ if __name__ == "__main__":
     optimizer = torch.optim.AdamW(model.parameters(), lr=2e-5)
 
     train_model(model, train_loader, val_loader, optimizer)
-
-
-
-
-
-
-
-
-
-

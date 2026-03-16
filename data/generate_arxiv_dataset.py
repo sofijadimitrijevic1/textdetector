@@ -42,6 +42,8 @@ CATEGORIES = ["cs.CL", "cs.CV", "physics.optics", "q-bio.GN", "econ.EM"]
 
 # Only fetch papers submitted after this date to avoid LLM regurgitation
 MIN_DATE = "2024-06-01"
+# Exclude papers from the last 3 days — PDFs take time to be processed by arXiv
+MAX_DATE = (pd.Timestamp.now() - pd.Timedelta(days=3)).strftime("%Y%m%d")
 
 # How much body text to send (words) — enough context without blowing token limit
 MAX_BODY_WORDS = 8000  # skip papers whose body exceeds this — don't truncate
@@ -118,7 +120,7 @@ def fetch_papers(category: str, n: int) -> list:
     print(f"  Fetching up to {n} papers from arXiv [{category}]...")
     client = arxiv.Client()
     search = arxiv.Search(
-        query=f"cat:{category} AND submittedDate:[{MIN_DATE.replace('-', '')} TO 99991231]",
+        query=f"cat:{category} AND submittedDate:[{MIN_DATE.replace('-', '')} TO {MAX_DATE}]",
         max_results=n,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending,

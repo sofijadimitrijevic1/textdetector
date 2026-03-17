@@ -38,7 +38,8 @@ load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"), override=True
 # ---------------------------------------------------------------------------
 
 # Multiple domains to avoid field-bias
-CATEGORIES = ["cs.CL", "cs.CV", "physics.optics", "q-bio.GN", "econ.EM"]
+# add cs.CL
+CATEGORIES = ["physics.optics", "q-bio.GN", "econ.EM"]
 
 # Only fetch papers submitted after this date to avoid LLM regurgitation
 MIN_DATE = "2024-06-01"

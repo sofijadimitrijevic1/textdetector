@@ -1,12 +1,3 @@
-"""
-View arxiv pairs in a readable format.
-
-Usage:
-  python data/view_pairs.py           # show all pairs
-  python data/view_pairs.py --n 5     # show first 5
-  python data/view_pairs.py --i 2     # show specific pair by index
-"""
-
 import argparse
 import os
 

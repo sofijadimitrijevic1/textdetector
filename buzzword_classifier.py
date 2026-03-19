@@ -37,7 +37,28 @@ AI_WORDS = [
     "advancing",
 ]
 
-HUMAN_WORDS = []
+HUMAN_WORDS = [
+    "that",
+    "the",
+    "in this",
+    "in the",
+    "of",
+    "of the",
+    "show that",
+    "have",
+    "in",
+    "is",
+    "to the",
+    "using",
+    "be",
+    "such",
+    "on",
+    "can",
+    "used",
+    "show",
+    "https",
+    "such as",
+]
 
 
 def count_buzzwords(text: str, wordlist: list[str]) -> int:
